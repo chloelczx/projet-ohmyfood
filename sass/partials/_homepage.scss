@@ -1,0 +1,16 @@
+@use "general" as *;
+
+.header {
+    flex-direction: column;
+
+    &__location {
+        width: 100%;
+        height: 50px;
+        font-weight: 500;
+        background: $location-bg-color;
+        @include flex-center;
+        gap: 17px;
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+        margin-top: 15px;
+    }
+}
