@@ -1,16 +1,27 @@
 @use "general" as *;
 
-.header {
+.home-header {
     flex-direction: column;
 
+    &__logo-wrapper {
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+        @include flex-center;
+        padding: 15px 0;
+    }
+
     &__location {
-        width: 100%;
-        height: 50px;
         font-weight: 500;
         background: $location-bg-color;
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
         @include flex-center;
         gap: 17px;
-        box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
-        margin-top: 15px;
+        height: 50px;
     }
+}
+
+.hero {
+    @include flex-column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }

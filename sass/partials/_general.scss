@@ -1,5 +1,5 @@
 /****** Général ***********/
-Body {
+body {
     font-family: "Roboto", sans-serif;
 }
 
@@ -68,6 +68,10 @@ $logo-font: "Shrikhand", serif;
 }
 
 /****** Composants ***********/
+.main-container {
+    background-color: $main-bg-color;
+}
+
 .section-title {
     font-size: 24px;
     font-weight: 700;
@@ -85,13 +89,17 @@ $logo-font: "Shrikhand", serif;
     background: $btn-gradient;
     border-radius: $btn-radius;
     box-shadow: $btn-shadow;
+    display: flex;
+    justify-content: center;
+    min-width: 186px;
+    padding: 15px 25px;
 }
 
 .header {
     font-size: 16px;
-    @include flex-center;
-    padding: 15px 0;
-    
+    background: white;
+    display: flex;
+
     &__logo {
         width: 162px;
     }
@@ -99,6 +107,7 @@ $logo-font: "Shrikhand", serif;
 
 .footer {
     color: white;
+    font-size: 16px;
     background-color: $dark-grey;
     @include flex-column;
     gap: 16px;
@@ -116,7 +125,6 @@ $logo-font: "Shrikhand", serif;
     }
 
     &__link {
-        font-size: 16px;
         font-weight: 400;
         
         &--icon {
