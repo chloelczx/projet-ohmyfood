@@ -1,0 +1,132 @@
+/****** Général ***********/
+Body {
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+p {
+    font-weight: 300;
+}
+
+/****** Variables - couleurs ***********/
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$main-bg-color: #F3F3F3;
+$location-bg-color: #EAEAEA;
+$medium-grey: #7E7E7E;
+$dark-grey: #353535;
+$dark-green: #008766;
+$btn-gradient: linear-gradient($secondary-color, $primary-color);
+$like-gradient: linear-gradient($primary-color, $secondary-color);
+
+/****** Variables - radius ***********/
+$btn-radius: 25px;
+$card-radius: 15px;
+
+/****** Variables - shadows ***********/
+$btn-shadow: 0 4px 10px 0 rgba(0,0,0,0.25);
+$menu-card-shadow: 0 4px 15px 0 rgba(0,0,0,0.1);
+
+/****** Variables - textes ***********/
+$logo-font: "Shrikhand", serif;
+
+/****** Mixins ***********/
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin card {
+    background-color: white;
+    border-radius: $card-radius;
+}
+
+/****** Composants ***********/
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.menu__card-title {
+    font-family: $logo-font;
+    font-size: 28px;
+}
+
+.btn {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    background: $btn-gradient;
+    border-radius: $btn-radius;
+    box-shadow: $btn-shadow;
+}
+
+.header {
+    @include flex-center;
+    padding: 15px 0;
+    
+    &__logo {
+        width: 162px;
+    }
+}
+
+.footer {
+    color: white;
+    background-color: $dark-grey;
+    @include flex-column;
+    gap: 16px;
+    padding: 22px 25px;
+
+    &__logo {
+        font-family: $logo-font;
+        font-size: 18px;
+        display: block;
+    }
+
+    &__links, &__group {
+        @include flex-column;
+        gap: 7px;
+    }
+
+    &__link {
+        font-size: 16px;
+        font-weight: 400;
+        
+        &--icon {
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+    }
+
+    &__icon {
+        font-size: 12px;
+    }
+}

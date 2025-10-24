@@ -1,3 +1,98 @@
+@charset "UTF-8";
+/****** Général ***********/
+Body {
+  font-family: "Roboto", sans-serif;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 50px 20px;
+}
+
+p {
+  font-weight: 300;
+}
+
+/****** Variables - couleurs ***********/
+/****** Variables - radius ***********/
+/****** Variables - shadows ***********/
+/****** Variables - textes ***********/
+/****** Mixins ***********/
+/****** Composants ***********/
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.menu__card-title {
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+}
+
+.btn {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+.header__logo {
+  width: 162px;
+}
+
+.footer {
+  color: white;
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 25px;
+}
+.footer__logo {
+  font-family: "Shrikhand", serif;
+  font-size: 18px;
+  display: block;
+}
+.footer__links, .footer__group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.footer__link {
+  font-size: 16px;
+  font-weight: 400;
+}
+.footer__link--icon {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.footer__icon {
+  font-size: 12px;
+}
 
 /*# sourceMappingURL=style.css.map */
