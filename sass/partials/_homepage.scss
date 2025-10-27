@@ -36,3 +36,50 @@
     }
 }
 
+.steps {
+    background-color: white;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        @include flex-column;
+        gap: 20px;
+    }
+
+    &__item {
+        font-weight: 500;
+        background-color: #F6F6F6;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px 0 rgba(0,0,0,0.15);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 25px 0;
+    }
+
+    &__number {
+        color: white;
+        font-size: 14px;
+        background-color: $primary-color;
+        border-radius: 50px;
+        @include flex-center;
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+    }
+
+    &__icon {
+        color: $medium-grey;
+        font-size: 19px;
+
+        &--purple {
+            color: $primary-color;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+    }
+}
