@@ -5,13 +5,16 @@
 
     &__logo-wrapper {
         box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
-        @include flex-center;
+        display: flex;
+        justify-content: center;
         padding: 15px 0;
+        z-index: 1;
     }
 
     &__location {
+        color: $dark-grey;
         font-weight: 500;
-        background: $location-bg-color;
+        background-color: $location-bg-color;
         box-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
         @include flex-center;
         gap: 17px;
@@ -20,8 +23,16 @@
 }
 
 .hero {
-    @include flex-column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+    text-align: center;
+    
+    &__subtitle {
+        color: $dark-grey;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    &__btn {
+        margin-top: 30px;
+    }
 }
+

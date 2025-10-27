@@ -55,15 +55,14 @@ p {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 25px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-  display: flex;
-  justify-content: center;
+  display: inline-block;
   min-width: 186px;
   padding: 15px 25px;
 }
 
 .header {
   font-size: 16px;
-  background: white;
+  background-color: white;
   display: flex;
 }
 .header__logo {
@@ -109,12 +108,13 @@ p {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: 15px 0;
+  z-index: 1;
 }
 .home-header__location {
+  color: #353535;
   font-weight: 500;
-  background: #EAEAEA;
+  background-color: #EAEAEA;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
@@ -124,11 +124,15 @@ p {
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
+  text-align: center;
+}
+.hero__subtitle {
+  color: #353535;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.hero__btn {
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
