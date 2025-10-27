@@ -98,6 +98,7 @@
     &__card {
         @include card;
         @include flex-column;
+        position: relative;
     }
 
     &__card-img {
@@ -109,6 +110,11 @@
         &--center {
             object-position: 50% 60%;
         }
+    }
+
+    &__badge {
+        top: 12px;
+        right: 12px;
     }
 
     &__card-content {

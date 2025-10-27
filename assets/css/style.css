@@ -65,6 +65,17 @@ p {
   font-size: 22px;
 }
 
+.badge {
+  color: #008766;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #99E2D0;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  padding: 6px 12px;
+  position: absolute;
+}
+
 .header {
   font-size: 16px;
   background-color: white;
@@ -198,6 +209,7 @@ p {
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .restaurants__card-img {
   border-radius: 15px 15px 0 0;
@@ -207,6 +219,10 @@ p {
 }
 .restaurants__card-img--center {
   object-position: 50% 60%;
+}
+.restaurants__badge {
+  top: 12px;
+  right: 12px;
 }
 .restaurants__card-content {
   display: flex;
