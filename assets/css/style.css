@@ -170,7 +170,8 @@ p {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 25px 0;
+  padding: 25px;
+  position: relative;
 }
 .steps__number {
   color: white;
@@ -182,7 +183,8 @@ p {
   align-items: center;
   width: 24px;
   height: 24px;
-  margin-left: -12px;
+  position: absolute;
+  left: -12px;
 }
 .steps__icon {
   color: #7E7E7E;
