@@ -46,6 +46,7 @@
     &__list {
         @include flex-column;
         gap: 20px;
+        padding-left: 12px;
     }
 
     &__item {

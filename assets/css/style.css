@@ -62,6 +62,7 @@ p {
 }
 
 .like {
+  color: #101010;
   font-size: 22px;
 }
 
@@ -161,6 +162,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-left: 12px;
 }
 .steps__item {
   font-weight: 500;
