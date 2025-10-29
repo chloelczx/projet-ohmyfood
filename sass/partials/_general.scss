@@ -1,3 +1,5 @@
+@use "sass:color";
+
 /****** Général ***********/
 body {
     font-family: "Roboto", sans-serif;
@@ -38,6 +40,7 @@ $medium-grey: #7E7E7E;
 $dark-grey: #353535;
 $dark-green: #008766;
 $btn-gradient: linear-gradient($secondary-color, $primary-color);
+$btn-light-gradient: linear-gradient(color.scale($secondary-color, $lightness:15%), color.scale($primary-color, $lightness:15%));
 $like-gradient: linear-gradient($primary-color, $secondary-color);
 
 /****** Variables - radius ***********/
@@ -46,11 +49,15 @@ $card-radius: 15px;
 
 /****** Variables - shadows ***********/
 $btn-shadow: 0 4px 10px 0 rgba(0,0,0,0.25);
+$btn-dark-shadow: 0 4px 15px 0 rgba(0,0,0,0.35);
 $card-shadow: 0 4px 15px 0 rgba(0,0,0,0.1);
 
 /****** Variables - textes ***********/
 $logo-font: "Shrikhand", serif;
 $card-title: 18px;
+
+/****** Variables - transitions ***********/
+$btn-transition: 300ms ease-out;
 
 /****** Mixins ***********/
 @mixin flex-center {
@@ -95,6 +102,32 @@ $card-title: 18px;
     display: inline-block;
     min-width: 186px;
     padding: 15px 25px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow $btn-transition;
+
+    &__txt {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::before {
+        content: "";
+        background: $btn-light-gradient;
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        opacity: 0;
+        transition: opacity $btn-transition;
+    }
+
+    &:hover {
+        box-shadow: $btn-dark-shadow;
+
+        &::before {
+            opacity: 1;
+        }
+    }
 }
 
 .like {
