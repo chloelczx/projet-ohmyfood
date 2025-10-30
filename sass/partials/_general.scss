@@ -58,6 +58,7 @@ $card-title: 18px;
 
 /****** Variables - transitions ***********/
 $btn-transition: 300ms ease-out;
+$like-transition: 50ms linear;
 
 /****** Mixins ***********/
 @mixin flex-center {
@@ -131,8 +132,42 @@ $btn-transition: 300ms ease-out;
 }
 
 .like {
-    color: #101010;
-    font-size: 22px;
+    cursor: pointer;
+    position: relative;
+
+    &__checkbox {
+        opacity: 0;
+    }
+
+    &__icon {
+       color: #101010;
+       font-size: 22px;
+       position: absolute;
+       top: 5px;
+       right: 10px;
+       transition: all $like-transition;
+
+       &--filled {
+        color: transparent;
+        background: $like-gradient;
+        background-clip: text;
+        opacity: 0;
+        transform: scale(0.6);
+       }
+    }
+
+    &__icon-empty {
+        opacity: 1;
+    }
+
+    &__checkbox:checked ~ .like__icon--filled {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &__checkbox:checked ~ .like__icon-empty {
+        opacity: 0;
+    }
 }
 
 .badge {

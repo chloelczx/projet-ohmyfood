@@ -85,8 +85,36 @@ p {
 }
 
 .like {
+  cursor: pointer;
+  position: relative;
+}
+.like__checkbox {
+  opacity: 0;
+}
+.like__icon {
   color: #101010;
   font-size: 22px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  transition: all 50ms linear;
+}
+.like__icon--filled {
+  color: transparent;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  opacity: 0;
+  transform: scale(0.6);
+}
+.like__icon-empty {
+  opacity: 1;
+}
+.like__checkbox:checked ~ .like__icon--filled {
+  opacity: 1;
+  transform: scale(1);
+}
+.like__checkbox:checked ~ .like__icon-empty {
+  opacity: 0;
 }
 
 .badge {
@@ -254,8 +282,7 @@ p {
 .restaurants__card-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 15px 25px 15px 13px;
+  padding: 15px 13px;
 }
 .restaurants__card-title {
   font-size: 18px;
