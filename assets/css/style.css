@@ -169,6 +169,32 @@ p {
   font-size: 12px;
 }
 
+/****** Media queries ***********/
+/****** Medium device (tablet) ***********/
+/****** Large device (desktop) ***********/
+@media (min-width: 1025px) {
+  .header__logo {
+    width: 200px;
+  }
+  section {
+    padding: 50px 180px;
+  }
+  .footer {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 100px;
+    padding: 60px 50px 30px 25px;
+  }
+  .footer__links {
+    gap: 50px;
+  }
+  .footer__group {
+    gap: 14px;
+  }
+  .footer__links, .footer__group {
+    flex-direction: row;
+  }
+}
 .home-header {
   flex-direction: column;
 }
@@ -212,7 +238,7 @@ p {
 .steps__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
   padding-left: 12px;
 }
 .steps__item {
@@ -224,6 +250,7 @@ p {
   align-items: center;
   gap: 20px;
   padding: 25px;
+  width: 100%;
   position: relative;
 }
 .steps__number {
@@ -291,6 +318,34 @@ p {
 .restaurants__card-subtitle {
   font-size: 17px;
   margin-top: 3px;
+}
+
+/****** Media queries ***********/
+/****** Medium device (tablet) ***********/
+/****** Large device (desktop) ***********/
+@media (min-width: 1025px) {
+  .home-header__logo-wrapper {
+    padding: 30px 0;
+  }
+  .home-header__logo-wrapper, .home-header__location {
+    box-shadow: none;
+  }
+  .hero__title {
+    font-size: 40px;
+  }
+  .hero__subtitle {
+    margin-top: 25px;
+  }
+  .steps__list {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 37px;
+  }
+  .restaurants__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 100px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

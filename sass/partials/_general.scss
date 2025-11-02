@@ -225,3 +225,41 @@ $like-transition: 50ms linear;
         font-size: 12px;
     }
 }
+
+/****** Media queries ***********/
+/****** Medium device (tablet) ***********/
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+}
+
+/****** Large device (desktop) ***********/
+@media (min-width: 1025px) {
+    .header {
+        &__logo {
+            width: 200px;
+        }
+    }
+    
+    section {
+        padding: 50px 180px;
+    }
+
+    .footer {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 100px;
+        padding: 60px 50px 30px 25px;
+
+        &__links {
+            gap: 50px;
+        }
+
+        &__group {
+            gap: 14px;
+        }
+        
+        &__links, &__group {
+            flex-direction: row;
+        }
+    }
+}

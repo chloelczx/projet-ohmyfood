@@ -1,5 +1,4 @@
 @use "general" as *;
-
 .home-header {
     flex-direction: column;
 
@@ -45,7 +44,7 @@
 
     &__list {
         @include flex-column;
-        gap: 20px;
+        gap: 25px;
         padding-left: 12px;
     }
 
@@ -58,6 +57,7 @@
         align-items: center;
         gap: 20px;
         padding: 25px;
+        width: 100%;
         position: relative;
     }
 
@@ -134,5 +134,49 @@
     &__card-subtitle {
         font-size: 17px;
         margin-top: 3px;
+    }
+}
+
+/****** Media queries ***********/
+/****** Medium device (tablet) ***********/
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/****** Large device (desktop) ***********/
+@media (min-width: 1025px) {
+    .home-header {
+        &__logo-wrapper {
+            padding: 30px 0;
+        }
+        &__logo-wrapper, &__location {
+            box-shadow: none;
+        }
+    }
+
+    .hero {
+        &__title {
+            font-size: 40px;
+        }
+
+        &__subtitle {
+            margin-top: 25px;
+        }
+    }
+
+    .steps {
+        &__list {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 37px;
+        }
+    }
+
+    .restaurants {
+        &__cards {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px 100px;
+        }
     }
 }
