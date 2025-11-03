@@ -1,0 +1,26 @@
+@use "general" as *;
+
+.restaurant-header {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    position: relative;
+
+    &__back {
+        position: absolute;
+        left: 20px;
+    }
+}
+
+/****** Media queries ***********/
+/****** Medium device (tablet) ***********/
+@media (min-width: 768px) {
+}
+
+/****** Large device (desktop) ***********/
+@media (min-width: 1025px) {
+    .restaurant-header {
+        padding: 30px 0;
+    }
+}

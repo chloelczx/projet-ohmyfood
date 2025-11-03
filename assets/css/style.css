@@ -45,11 +45,6 @@ p {
   font-weight: 700;
 }
 
-.menu__card-title {
-  font-family: "Shrikhand", serif;
-  font-size: 28px;
-}
-
 .btn {
   color: white;
   font-size: 16px;
@@ -367,6 +362,26 @@ p {
   }
   .restaurants__cards {
     gap: 50px 100px;
+  }
+}
+.restaurant-header {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  position: relative;
+}
+.restaurant-header__back {
+  position: absolute;
+  left: 20px;
+}
+
+/****** Media queries ***********/
+/****** Medium device (tablet) ***********/
+/****** Large device (desktop) ***********/
+@media (min-width: 1025px) {
+  .restaurant-header {
+    padding: 30px 0;
   }
 }
 
