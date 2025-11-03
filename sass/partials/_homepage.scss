@@ -58,6 +58,7 @@
         gap: 20px;
         padding: 25px;
         width: 100%;
+        max-width: 450px;
         position: relative;
     }
 
@@ -139,8 +140,23 @@
 
 /****** Media queries ***********/
 /****** Medium device (tablet) ***********/
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
+    .steps {
+        &__title {
+            text-align: center;
+        }
 
+        &__list {
+            align-items: center;
+        }
+    }
+
+    .restaurants {
+        &__cards {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px 50px;
+        }
+    }
 }
 
 /****** Large device (desktop) ***********/
@@ -165,6 +181,10 @@
     }
 
     .steps {
+        &__title {
+            text-align: start;
+        }
+        
         &__list {
             flex-direction: row;
             justify-content: space-between;
@@ -175,7 +195,6 @@
 
     .restaurants {
         &__cards {
-            grid-template-columns: repeat(2, 1fr);
             gap: 50px 100px;
         }
     }
