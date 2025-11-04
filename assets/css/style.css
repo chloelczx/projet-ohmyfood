@@ -21,10 +21,6 @@ img {
   height: auto;
 }
 
-section {
-  padding: 50px 20px;
-}
-
 p {
   font-weight: 300;
 }
@@ -43,6 +39,11 @@ p {
 .section-title {
   font-size: 24px;
   font-weight: 700;
+}
+
+.menu-title {
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
 }
 
 .btn {
@@ -164,9 +165,6 @@ p {
 /****** Media queries ***********/
 /****** Medium device (tablet) ***********/
 @media (min-width: 768px) {
-  section {
-    padding: 50px 80px;
-  }
   .footer {
     padding: 30px 25px;
   }
@@ -182,9 +180,6 @@ p {
 }
 /****** Large device (desktop) ***********/
 @media (min-width: 1025px) {
-  section {
-    padding: 50px 180px;
-  }
   .like:hover .like__icon--filled {
     opacity: 1;
     transform: scale(1);
@@ -226,6 +221,7 @@ p {
 
 .hero {
   text-align: center;
+  padding: 50px 20px;
 }
 .hero__subtitle {
   color: #353535;
@@ -238,6 +234,7 @@ p {
 
 .steps {
   background-color: white;
+  padding: 50px 20px;
 }
 .steps__title {
   margin-bottom: 30px;
@@ -284,6 +281,9 @@ p {
   font-size: 16px;
 }
 
+.restaurants {
+  padding: 50px 20px;
+}
 .restaurants__title {
   margin-bottom: 20px;
 }
@@ -333,6 +333,9 @@ p {
 /****** Media queries ***********/
 /****** Medium device (tablet) ***********/
 @media (min-width: 768px) {
+  .hero, .steps, .restaurants {
+    padding: 50px 80px;
+  }
   .restaurants__cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px 50px;
@@ -346,17 +349,26 @@ p {
   .home-header__logo-wrapper, .home-header__location {
     box-shadow: none;
   }
+  .hero {
+    padding: 30px 180px;
+  }
   .hero__title {
     font-size: 40px;
   }
   .hero__subtitle {
     margin-top: 25px;
   }
+  .steps {
+    padding: 50px 180px;
+  }
   .steps__list {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 37px;
+  }
+  .restaurants {
+    padding: 20px 180px;
   }
   .restaurants__cards {
     gap: 50px 100px;
@@ -374,12 +386,30 @@ p {
   left: 20px;
 }
 
+.menu {
+  background-color: #F3F3F3;
+}
+.menu__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px 30px 15px;
+}
+
 /****** Media queries ***********/
 /****** Medium device (tablet) ***********/
 /****** Large device (desktop) ***********/
 @media (min-width: 1025px) {
   .restaurant-header {
     padding: 30px 0;
+  }
+  .menu {
+    margin: 0 180px;
+  }
+  .menu__title {
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 180px;
   }
 }
 

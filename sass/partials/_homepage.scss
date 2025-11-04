@@ -24,6 +24,7 @@
 
 .hero {
     text-align: center;
+    padding: 50px 20px;
     
     &__subtitle {
         color: $dark-grey;
@@ -38,6 +39,7 @@
 
 .steps {
     background-color: white;
+    padding: 50px 20px;
 
     &__title {
         margin-bottom: 30px;
@@ -89,6 +91,8 @@
 }
 
 .restaurants {
+    padding: 50px 20px;
+
     &__title {
         margin-bottom: 20px;
     }
@@ -146,13 +150,17 @@
 /****** Media queries ***********/
 /****** Medium device (tablet) ***********/
 @media (min-width: 768px) {
+    .hero, .steps, .restaurants {
+        padding: 50px 80px;
+    }
+    
     .restaurants {
         &__cards {
             grid-template-columns: repeat(2, 1fr);
             gap: 25px 50px;
         }
     }
-}
+} 
 
 /****** Large device (desktop) ***********/
 @media (min-width: 1025px) {
@@ -166,6 +174,8 @@
     }
 
     .hero {
+        padding: 30px 180px;
+
         &__title {
             font-size: 40px;
         }
@@ -176,6 +186,8 @@
     }
 
     .steps {
+        padding: 50px 180px;
+
         &__list {
             flex-direction: row;
             justify-content: space-between;
@@ -185,6 +197,8 @@
     }
 
     .restaurants {
+        padding: 20px 180px;
+        
         &__cards {
             gap: 50px 100px;
         }

@@ -22,10 +22,6 @@ img {
     height: auto;
 }
 
-section {
-    padding: 50px 20px;
-}
-
 p {
     font-weight: 300;
 }
@@ -86,6 +82,11 @@ $like-transition: 50ms linear;
 .section-title {
     font-size: 24px;
     font-weight: 700;
+}
+
+.menu-title {
+    font-family: $logo-font;
+    font-size: 28px;
 }
 
 .btn {
@@ -222,10 +223,6 @@ $like-transition: 50ms linear;
 /****** Media queries ***********/
 /****** Medium device (tablet) ***********/
 @media (min-width: 768px) {
-    section {
-        padding: 50px 80px;
-    }
-
     .footer {
         padding: 30px 25px;
 
@@ -245,10 +242,6 @@ $like-transition: 50ms linear;
 
 /****** Large device (desktop) ***********/
 @media (min-width: 1025px) {
-    section {
-        padding: 50px 180px;
-    }
-
     .like {
         &:hover {
             .like__icon--filled {
