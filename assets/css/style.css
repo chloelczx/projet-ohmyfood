@@ -80,34 +80,32 @@ p {
 
 .like {
   cursor: pointer;
+  background: none;
+  border: none;
   position: relative;
-}
-.like__checkbox {
-  opacity: 0;
 }
 .like__icon {
   color: #101010;
   font-size: 22px;
-  position: absolute;
-  top: 5px;
-  right: 10px;
   transition: all 50ms linear;
 }
 .like__icon--filled {
   color: transparent;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
+  position: absolute;
+  inset: 0;
   opacity: 0;
   transform: scale(0.6);
 }
 .like__icon-empty {
   opacity: 1;
 }
-.like__checkbox:checked ~ .like__icon--filled {
+.like:active .like__icon--filled {
   opacity: 1;
   transform: scale(1);
 }
-.like__checkbox:checked ~ .like__icon-empty {
+.like:active .like__icon-empty {
   opacity: 0;
 }
 
@@ -184,11 +182,18 @@ p {
 }
 /****** Large device (desktop) ***********/
 @media (min-width: 1025px) {
-  .header__logo {
-    width: 200px;
-  }
   section {
     padding: 50px 180px;
+  }
+  .like:hover .like__icon--filled {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .like:hover .like__icon-empty {
+    opacity: 0;
+  }
+  .header__logo {
+    width: 200px;
   }
   .footer {
     flex-direction: row-reverse;
@@ -253,7 +258,6 @@ p {
   gap: 20px;
   padding: 25px;
   width: 100%;
-  max-width: 450px;
   position: relative;
 }
 .steps__number {
@@ -310,8 +314,6 @@ p {
   right: 12px;
 }
 .restaurants__card-content {
-  display: flex;
-  justify-content: space-between;
   padding: 15px 13px;
 }
 .restaurants__card-title {
@@ -322,16 +324,15 @@ p {
   font-size: 17px;
   margin-top: 3px;
 }
+.restaurants__like {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+}
 
 /****** Media queries ***********/
 /****** Medium device (tablet) ***********/
 @media (min-width: 768px) {
-  .steps__title {
-    text-align: center;
-  }
-  .steps__list {
-    align-items: center;
-  }
   .restaurants__cards {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px 50px;
@@ -350,9 +351,6 @@ p {
   }
   .hero__subtitle {
     margin-top: 25px;
-  }
-  .steps__title {
-    text-align: start;
   }
   .steps__list {
     flex-direction: row;
