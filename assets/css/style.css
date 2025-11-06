@@ -374,6 +374,22 @@ p {
     gap: 50px 100px;
   }
 }
+@keyframes card-delay {
+  0% {
+    opacity: 0.2;
+    transform: scaleX(0.2);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
 .restaurant-header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   justify-content: center;
@@ -424,6 +440,20 @@ p {
   position: relative;
   overflow: hidden;
   transition: padding-right 350ms ease-out;
+}
+.menu__card--starters, .menu__card--main, .menu__card--desserts {
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.menu__card--starters {
+  animation: card-delay 0.5s ease-out forwards 0.2s;
+}
+.menu__card--main {
+  animation: card-delay 0.5s ease-out forwards 0.4s;
+}
+.menu__card--desserts {
+  animation: card-delay 0.5s ease-out forwards 0.6s;
 }
 .menu__card:active {
   padding-right: 74px;

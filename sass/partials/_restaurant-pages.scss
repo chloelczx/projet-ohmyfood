@@ -1,5 +1,25 @@
 @use "general" as *;
 
+@keyframes card-delay {
+    0% {
+        opacity: 0.2;
+        transform: scaleX(0.2);
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
 .restaurant-header {
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
     justify-content: center;
@@ -53,6 +73,24 @@
         position: relative;
         overflow: hidden;
         transition: padding-right 350ms ease-out;
+
+        &--starters, &--main, &--desserts {
+            opacity: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        &--starters {
+            animation: card-delay 0.5s ease-out forwards 0.2s;
+        }
+
+        &--main {
+            animation: card-delay 0.5s ease-out forwards 0.4s;
+        }
+
+        &--desserts {
+            animation: card-delay 0.5s ease-out forwards 0.6s;
+        }
 
         &:active {
             padding-right: 74px;
