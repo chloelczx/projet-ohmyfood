@@ -136,7 +136,7 @@ $like-transition: 50ms linear;
        font-size: 22px;
        transition: all $like-transition;
 
-       &--filled {
+       &--liked {
         color: transparent;
         background: $like-gradient;
         background-clip: text;
@@ -147,17 +147,17 @@ $like-transition: 50ms linear;
        }
     }
 
-    &__icon-empty {
+    &__icon-none {
         opacity: 1;
     }
 
     &:active {
-        .like__icon--filled {
+        .like__icon--liked {
             opacity: 1;
             transform: scale(1);
         }
 
-        .like__icon-empty {
+        .like__icon-none {
             opacity: 0;
         }
     }
@@ -243,12 +243,12 @@ $like-transition: 50ms linear;
 @media (min-width: 1025px) {
     .like {
         &:hover {
-            .like__icon--filled {
+            .like__icon--liked {
                 opacity: 1;
                 transform: scale(1);
             }
 
-            .like__icon-empty {
+            .like__icon-none {
                 opacity: 0;
             }
         }

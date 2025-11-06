@@ -89,7 +89,7 @@ p {
   font-size: 22px;
   transition: all 50ms linear;
 }
-.like__icon--filled {
+.like__icon--liked {
   color: transparent;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
@@ -98,14 +98,14 @@ p {
   opacity: 0;
   transform: scale(0.6);
 }
-.like__icon-empty {
+.like__icon-none {
   opacity: 1;
 }
-.like:active .like__icon--filled {
+.like:active .like__icon--liked {
   opacity: 1;
   transform: scale(1);
 }
-.like:active .like__icon-empty {
+.like:active .like__icon-none {
   opacity: 0;
 }
 
@@ -179,11 +179,11 @@ p {
 }
 /****** Large device (desktop) ***********/
 @media (min-width: 1025px) {
-  .like:hover .like__icon--filled {
+  .like:hover .like__icon--liked {
     opacity: 1;
     transform: scale(1);
   }
-  .like:hover .like__icon-empty {
+  .like:hover .like__icon-none {
     opacity: 0;
   }
   .header__logo {
@@ -416,14 +416,27 @@ p {
   margin-top: 5px;
 }
 .menu__card {
+  cursor: pointer;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1);
   padding: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: padding-right 350ms ease-out;
+}
+.menu__card:active {
+  padding-right: 74px;
+}
+.menu__card:active .menu__select {
+  transform: translateX(0);
 }
 .menu__card-title {
   font-size: 18px;
   font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   margin-bottom: 5px;
 }
 .menu__card-content {
@@ -433,10 +446,31 @@ p {
 }
 .menu__card-subtitle {
   font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu__card-price {
   font-size: 15px;
   font-weight: 700;
+}
+.menu__select {
+  color: white;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 59px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: transform 350ms ease-out;
+}
+.menu__select-icon {
+  font-size: 20px;
 }
 
 .order {
@@ -474,6 +508,12 @@ p {
   }
   .menu__cards {
     padding: 0 200px;
+  }
+  .menu__card:hover {
+    padding-right: 74px;
+  }
+  .menu__card:hover .menu__select {
+    transform: translateX(0);
   }
   .order {
     margin: 0 180px;
