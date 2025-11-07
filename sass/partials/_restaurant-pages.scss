@@ -196,10 +196,11 @@
     }
 
     .menu {
+        border-radius: 50px 50px 0 0;
         margin: -50px 180px 0 180px;
 
         &__title {
-            padding: 40px 0;
+            padding: 50px 0 40px 0;
         }
 
         &__cards {
@@ -211,7 +212,7 @@
             padding-right: 74px;
             }
 
-            &:hover .menu__select {
+            &:hover > .menu__select {
             transform: translateX(0);
             }
         }

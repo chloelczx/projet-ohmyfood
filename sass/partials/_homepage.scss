@@ -21,8 +21,6 @@
 
 .home-header {
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
-    position: relative;
-    z-index: 1;
 }
 
 .location {
@@ -34,13 +32,11 @@
     @include flex-center;
     gap: 17px;
     height: 50px;
-    position: relative;
-    z-index: 1;
 }
 
 .hero {
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px 50px 20px;
     
     &__subtitle {
         color: $dark-grey;
@@ -56,7 +52,7 @@
 
 .steps {
     background-color: white;
-    padding: 50px 20px;
+    padding: 50px 20px 70px 20px;
 
     &__title {
         margin-bottom: 30px;
@@ -108,7 +104,7 @@
 }
 
 .restaurants {
-    padding: 50px 20px;
+    padding: 50px 20px 70px 20px;
 
     &__title {
         margin-bottom: 20px;
@@ -169,11 +165,17 @@
 /****** Media queries ***********/
 /****** Medium device (tablet) ***********/
 @media (min-width: 768px) {
-    .hero, .steps, .restaurants {
-        padding: 50px 80px;
+    .hero {
+        padding: 40px 80px 50px 80px;
+    }
+
+    .steps {
+        padding: 50px 80px 70px 80px;
     }
     
     .restaurants {
+        padding: 50px 80px 70px 80px;
+
         &__cards {
             grid-template-columns: repeat(2, 1fr);
             gap: 25px 50px;
@@ -211,7 +213,7 @@
     }
 
     .restaurants {
-        padding: 20px 180px;
+        padding: 30px 180px;
         
         &__cards {
             gap: 50px 100px;

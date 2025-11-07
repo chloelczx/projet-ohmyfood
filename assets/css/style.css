@@ -176,11 +176,11 @@ p {
 }
 /****** Large device (desktop) ***********/
 @media (min-width: 1025px) {
-  .like:hover .like__icon--liked {
+  .like:hover__icon--liked {
     opacity: 1;
     transform: scale(1);
   }
-  .like:hover .like__icon-none {
+  .like:hover__icon-none {
     opacity: 0;
   }
   .header {
@@ -214,8 +214,6 @@ p {
 
 .home-header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
-  position: relative;
-  z-index: 1;
 }
 
 .location {
@@ -229,13 +227,11 @@ p {
   align-items: center;
   gap: 17px;
   height: 50px;
-  position: relative;
-  z-index: 1;
 }
 
 .hero {
   text-align: center;
-  padding: 50px 20px;
+  padding: 40px 20px 50px 20px;
 }
 .hero__subtitle {
   color: #353535;
@@ -249,7 +245,7 @@ p {
 
 .steps {
   background-color: white;
-  padding: 50px 20px;
+  padding: 50px 20px 70px 20px;
 }
 .steps__title {
   margin-bottom: 30px;
@@ -297,7 +293,7 @@ p {
 }
 
 .restaurants {
-  padding: 50px 20px;
+  padding: 50px 20px 70px 20px;
 }
 .restaurants__title {
   margin-bottom: 20px;
@@ -350,8 +346,14 @@ p {
 /****** Media queries ***********/
 /****** Medium device (tablet) ***********/
 @media (min-width: 768px) {
-  .hero, .steps, .restaurants {
-    padding: 50px 80px;
+  .hero {
+    padding: 40px 80px 50px 80px;
+  }
+  .steps {
+    padding: 50px 80px 70px 80px;
+  }
+  .restaurants {
+    padding: 50px 80px 70px 80px;
   }
   .restaurants__cards {
     grid-template-columns: repeat(2, 1fr);
@@ -382,7 +384,7 @@ p {
     gap: 37px;
   }
   .restaurants {
-    padding: 20px 180px;
+    padding: 30px 180px;
   }
   .restaurants__cards {
     gap: 50px 100px;
@@ -560,10 +562,11 @@ p {
     height: 383px;
   }
   .menu {
+    border-radius: 50px 50px 0 0;
     margin: -50px 180px 0 180px;
   }
   .menu__title {
-    padding: 40px 0;
+    padding: 50px 0 40px 0;
   }
   .menu__cards {
     padding: 0 200px;
@@ -571,7 +574,7 @@ p {
   .menu__card:hover {
     padding-right: 74px;
   }
-  .menu__card:hover .menu__select {
+  .menu__card:hover > .menu__select {
     transform: translateX(0);
   }
   .order {

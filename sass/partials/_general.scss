@@ -240,12 +240,12 @@ $like-transition: 50ms linear;
 @media (min-width: 1025px) {
     .like {
         &:hover {
-            .like__icon--liked {
+            &__icon--liked {
                 opacity: 1;
                 transform: scale(1);
             }
 
-            .like__icon-none {
+            &__icon-none {
                 opacity: 0;
             }
         }
