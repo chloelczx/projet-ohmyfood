@@ -18,8 +18,6 @@ a {
 
 img {
     object-fit: cover;
-    max-width: 100%;
-    height: auto;
 }
 
 p {
@@ -127,8 +125,6 @@ $like-transition: 50ms linear;
 
 .like {
     cursor: pointer;
-    background: none;
-    border: none;
     position: relative;
 
     &__icon {
@@ -152,12 +148,12 @@ $like-transition: 50ms linear;
     }
 
     &:active {
-        .like__icon--liked {
+        &__icon--liked {
             opacity: 1;
             transform: scale(1);
         }
 
-        .like__icon-none {
+        &__icon-none {
             opacity: 0;
         }
     }
@@ -175,9 +171,10 @@ $like-transition: 50ms linear;
 }
 
 .header {
-    font-size: 16px;
     background-color: white;
     display: flex;
+    justify-content: center;
+    padding: 15px 0;
 
     &__logo {
         width: 162px;
@@ -255,6 +252,8 @@ $like-transition: 50ms linear;
     }
     
     .header {
+        padding: 30px 0;
+
         &__logo {
             width: 200px;
         }
