@@ -127,6 +127,16 @@ $like-transition: 50ms linear;
     cursor: pointer;
     position: relative;
 
+    &--mobile {
+        display: block;
+    }
+
+    &__checkbox {
+        pointer-events: none;
+        opacity: 0;
+        position: absolute;
+    }
+
     &__icon {
        color: #101010;
        font-size: 22px;
@@ -147,15 +157,17 @@ $like-transition: 50ms linear;
         opacity: 1;
     }
 
-    &:active {
-        &__icon--liked {
-            opacity: 1;
-            transform: scale(1);
-        }
+    &__checkbox:checked ~ .like__icon--liked {
+        opacity: 1;
+        transform: scale(1);
+    }
 
-        &__icon-none {
-            opacity: 0;
-        }
+    &__checkbox:checked ~ .like__icon-none {
+        opacity: 0;
+    }
+
+    &--desktop {
+        display: none;
     }
 }
 
@@ -238,16 +250,24 @@ $like-transition: 50ms linear;
 
 /****** Large device (desktop) ***********/
 @media (min-width: 1025px) {
-    .like {
+    .like {  
+        &--desktop {
+            display: block;
+        }
+
         &:hover {
-            &__icon--liked {
+            .like__icon--liked {
                 opacity: 1;
                 transform: scale(1);
             }
 
-            &__icon-none {
+            .like__icon-none {
                 opacity: 0;
             }
+        }
+
+        &--mobile {
+            display: none;
         }
     }
     
