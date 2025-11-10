@@ -38,7 +38,7 @@
 
     &__img {
         width: 100%;
-        height: 275px;
+        height: 100%;
         object-position: 50% 60%;
     }
 }
@@ -189,10 +189,6 @@
 @media (min-width: 1025px) {
     .restaurant-cover {
         height: 383px;
-
-        &__img {
-            height: 383px;
-        }
     }
 
     .menu {

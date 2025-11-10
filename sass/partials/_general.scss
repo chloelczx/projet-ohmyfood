@@ -109,7 +109,6 @@ $like-transition: 50ms linear;
         background: $btn-light-gradient;
         position: absolute;
         inset: 0;
-        z-index: 0;
         opacity: 0;
         transition: opacity $btn-transition;
     }
@@ -204,7 +203,6 @@ $like-transition: 50ms linear;
     &__logo {
         font-family: $logo-font;
         font-size: 18px;
-        display: block;
     }
 
     &__links, &__group {
