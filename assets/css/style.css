@@ -231,6 +231,8 @@ p {
 
 .home-header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
 }
 
 .location {
@@ -244,6 +246,7 @@ p {
   align-items: center;
   gap: 17px;
   height: 50px;
+  position: relative;
 }
 
 .hero {
@@ -398,7 +401,7 @@ p {
   .steps__list {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     gap: 37px;
   }
   .restaurants {
