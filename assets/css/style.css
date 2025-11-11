@@ -438,20 +438,9 @@ p {
     gap: 50px 100px;
   }
 }
-@keyframes card-slide-in {
-  0% {
-    opacity: 0.2;
-    transform: scaleX(0.2);
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.8;
-  }
-  100% {
+@keyframes show-menu-card {
+  to {
     opacity: 1;
-    transform: scaleX(1);
   }
 }
 .restaurant-header {
@@ -519,22 +508,20 @@ p {
 }
 .menu__card--starters, .menu__card--main, .menu__card--desserts {
   opacity: 0;
-  transform: scaleX(0);
-  transform-origin: left;
 }
 .menu__card--starters {
-  animation: card-slide-in 0.5s ease-out forwards 0.2s;
+  animation: show-menu-card 0.5s ease-in 0.2s forwards;
 }
 .menu__card--main {
-  animation: card-slide-in 0.5s ease-out forwards 0.6s;
+  animation: show-menu-card 0.5s ease-in 0.4s forwards;
 }
 .menu__card--desserts {
-  animation: card-slide-in 0.5s ease-out forwards 1s;
+  animation: show-menu-card 0.5s ease-in 0.6s forwards;
 }
-.menu__card:active {
+.menu__card:hover {
   padding-right: 74px;
 }
-.menu__card:active > .menu__select {
+.menu__card:hover > .menu__select {
   transform: translateX(0);
 }
 .menu__card-title {
@@ -615,12 +602,6 @@ p {
   }
   .menu__cards {
     padding: 0 200px;
-  }
-  .menu__card:hover {
-    padding-right: 74px;
-  }
-  .menu__card:hover > .menu__select {
-    transform: translateX(0);
   }
   .order {
     margin: 0 180px;
