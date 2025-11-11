@@ -1,22 +1,48 @@
 @use "general" as *;
 
-@keyframes homepage-loader {
-    0% {
-        opacity: 0;
-        clip-path: inset(0 0 100% 0);
-    }
-
-    50% {
+@keyframes show-homepage {
+    to {
         opacity: 1;
     }
+}
 
-    100% {
-        clip-path: inset(0 0 0 0);
+@keyframes hide-homepage-loader {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes homepage-loader {
+    to {
+        transform: rotate(360deg);
     }
 }
 
 .home-body {
-    animation: homepage-loader 1s linear;
+    opacity: 0;
+    animation: show-homepage 1s linear 2s forwards;
+}
+
+.homepage-loader {
+    font-size: 24px;
+    background: linear-gradient($primary-color, $secondary-color);
+    @include flex-center;
+    flex-direction: column;
+    gap: 10px;
+    position: fixed;
+    inset: 0;
+    opacity: 1;
+    animation: hide-homepage-loader 1s linear 2s forwards;
+
+    &__txt {
+        color: white;
+        font-family: $logo-font;
+    }
+
+    &__icon {
+        color: $tertiary-color;
+        animation: homepage-loader 1s linear infinite;
+    }
 }
 
 .home-header {
@@ -189,6 +215,10 @@
 
 /****** Large device (desktop) ***********/
 @media (min-width: 1025px) {
+    .homepage-loader {
+        font-size: 40px;
+    }
+    
     .home-header, .location {
         box-shadow: none;
     }
